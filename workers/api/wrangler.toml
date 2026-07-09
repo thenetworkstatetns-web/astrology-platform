@@ -1,4 +1,4 @@
-name = "astro-platform-api"
+name = "astrology-platform"
 main = "src/index.ts"
 compatibility_date = "2024-09-23"
 compatibility_flags = ["nodejs_compat"]
@@ -12,7 +12,7 @@ enabled = true
 [[d1_databases]]
 binding = "DB"
 database_name = "astro-platform-db"
-database_id = "REPLACE_WITH_D1_DATABASE_ID"
+database_id = "4087b1b6-a9c3-45ab-9211-776787f4fc93"
 migrations_dir = "migrations"
 
 # ---------------------------------------------------------------------------
