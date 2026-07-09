@@ -1,0 +1,4 @@
+# Copy this file to .dev.vars for local development with `wrangler dev`.
+# Never commit the real .dev.vars file.
+
+JWT_SECRET=replace-with-a-long-random-secret-for-local-dev
