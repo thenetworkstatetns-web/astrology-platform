@@ -16,15 +16,18 @@ database_id = "4087b1b6-a9c3-45ab-9211-776787f4fc93"
 migrations_dir = "migrations"
 
 # ---------------------------------------------------------------------------
-# R2 Storage binding — configured only, not used in Task 1.
+# R2 Storage binding — not enabled yet. Add this back once the
+# astro-platform-media bucket has actually been created in the dashboard:
+#
+# [[r2_buckets]]
+# binding = "MEDIA_BUCKET"
+# bucket_name = "astro-platform-media"
 # ---------------------------------------------------------------------------
-[[r2_buckets]]
-binding = "MEDIA_BUCKET"
-bucket_name = "astro-platform-media"
 
 # ---------------------------------------------------------------------------
 # Environment variables (non-secret). Secrets (JWT_SECRET) must be set via:
 #   wrangler secret put JWT_SECRET
+#   (or Cloudflare Dashboard → Settings → Variables and Secrets)
 # ---------------------------------------------------------------------------
 [vars]
 ENVIRONMENT = "development"
@@ -41,7 +44,4 @@ ALLOWED_ORIGINS = "https://example.com,https://admin.example.com"
 binding = "DB"
 database_name = "astro-platform-db"
 database_id = "4087b1b6-a9c3-45ab-9211-776787f4fc93"
-
-[[env.production.r2_buckets]]
-binding = "MEDIA_BUCKET"
-bucket_name = "astro-platform-media"
+migrations_dir = "migrations"
