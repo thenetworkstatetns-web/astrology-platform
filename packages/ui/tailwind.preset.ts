@@ -1,6 +1,9 @@
-import type { Config } from "tailwindcss";
-
-const preset: Partial<Config> = {
+// NOTE: intentionally untyped (no `import type { Config } from "tailwindcss"`)
+// so this file has zero dependency on the `tailwindcss` package being
+// resolvable from this workspace package's own node_modules. The apps that
+// consume this preset (apps/web, apps/admin) already have `tailwindcss`
+// installed and will type-check the final merged config on their end.
+const preset = {
   theme: {
     extend: {
       colors: {
